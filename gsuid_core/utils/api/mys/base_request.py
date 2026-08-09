@@ -206,7 +206,7 @@ class BaseMysApi:
         return server_id
 
     def get_device_id(self) -> str:
-        device_id = str(uuid.uuid4()).lower()
+        device_id = self.generate_seed(16)
         return device_id
 
     @staticmethod
